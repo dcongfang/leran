@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+}
+html,body{
+    font-size:20px;
+    width:100%;
+    height:100%;
+}
+.header-title{
+    font-size: 0.85rem;
+}
+.header-items{
+    margin-top: 0.75rem;
+    /* margin-left:0.7rem; */
+}
+.item-price{
+    /* height: 5.5rem; */
+    /* width:5.5rem; */
+    border-radius: 5px;
+    border:1px solid #999999;
+    text-align: center;
+}
+.item-price_month{
+    font-size:0.95rem;
+    /* font-weight: bold; */
+    margin-top:1rem;
+    color: #333333;
+    line-height:1;
+}
+.item-price_old{
+    font-size:0.6rem;
+    color:#999999;
+    margin-top:0.5rem;
+    line-height:1;
+    text-decoration: line-through;
+}
+.item-price_new{
+    color:#48a6fd;
+    font-size:0.85rem;
+    margin-top:0.75rem; 
+    margin-bottom:0.95rem;  
+}
+.header-items .item{
+    display: inline-block;
+}
+.flex{
+    display:flex;
+}
+.flex1{
+    flex:1;
+}
+.mr{
+    margin:0 0.4rem 0 0.4rem;
+}
+.header{
+    padding:0.75rem 0.75rem 1rem 0.75rem;
+    background-color: #ffffff;
+}
+.pay-page{
+    background-color: #f5fafe;
+    height:100%;
+}
