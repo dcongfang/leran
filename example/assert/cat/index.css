@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+    background-color: pink;
+}
+.cat{
+    width: 100%;
+    height: 100%;
+}
+.cat-st{
+    width: 117px;
+    height: 201px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    
+}
+.bg{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    background-image: url(./maoshenti.png);
+    z-index: 3;
+   
+}
+@keyframes maowei{
+    0%{
+        transform:rotateZ(0);
+    }
+    25%{
+        transform: rotateZ(10deg);
+    }
+    50%{
+        transform: rotateZ(-10deg); 
+    }
+    75%{
+        transform: rotateZ(10deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+
+}
+.cat-tail{
+    width: 67px;
+    height: 194px;
+    position: absolute;
+    background: url(./maowei.png)no-repeat;
+    top:-91%; 
+    animation: maowei 8s linear infinite;
+    transform-origin: 50% 100%;
+}
+.maozhua{
+    position: absolute;
+    width: 36px;
+    height: 82px;
+    background-image: url(./maozhua.png);
+    bottom: -33%;
+    left:70px;
+    z-index: 1;
+    animation: maozhua 5s linear infinite;
+    transform-origin: 50% 0%;
+}
+@keyframes maozhua{
+    0%{
+        transform:rotateZ(0);
+    }
+    25%{
+        transform: rotateZ(10deg);
+    }
+    50%{
+        transform: rotateZ(0deg); 
+    }
+    75%{
+        transform: rotateZ(-10deg);
+    }
+    100%{
+        transform: rotateZ(0);
+    }
+}
+ .maoyan.maoyan1{
+     height: 3px;
+     width: 3px;
+    position: absolute;
+    background-image: url(./maoyan1.png);
+    top:85%;
+    left:70px;
+    z-index: 3;
+}
+.maoyan.maoyan2{
+    height: 3px;
+    width: 3px;
+   position: absolute;
+   background-image: url(./maoyan2.png);
+   top:90%;
+   left:85px;
+   z-index: 3;
+}
+.maozui{
+    height: 5px;
+    width: 5px;
+    position: absolute;
+    background-image: url(./maozui.png);
+    z-index: 3;
+    top:92%;
+    left:70px;
+}
