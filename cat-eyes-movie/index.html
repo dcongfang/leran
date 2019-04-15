@@ -138,6 +138,78 @@
             </li> -->
         </ul>
     </section>
+    <!-- section6 -->
+    <section class="ection-seperate section-expander">
+      <p class="section-til pos_r">讨论
+        <span class="join-comment">参与讨论</span>
+      </p>
+      <ul class="movie-comment">
+        <li class="comment-item">
+          <div class="comment-item_sort">
+            <span>全部</span>
+            <span class="comment-item_num" id="1"></span>
+          </div>
+        </li>
+        <li class="comment-item">
+            <div class="comment-item_sort">
+              <span>好评</span>
+              <span class="comment-item_num" id="2"></span>
+            </div>
+          </li>
+          <li class="comment-item">
+              <div class="comment-item_sort">
+                <span>差评</span>
+                <span class="comment-item_num" id="3"></span>
+              </div>
+            </li>
+            <li class="comment-item">
+                <div class="comment-item_sort">
+                  <span>购票</span>
+                  <span class="comment-item_num" id="4"></span>
+                </div>
+              </li>
+            <li class="comment-item">
+                <div class="comment-item_sort">
+                  <span>点映</span>
+                  <span class="comment-item_num" id="5"></span>
+                </div>
+              </li>
+            <li class="comment-item">
+                <div class="comment-item_sort">
+                  <span>认证作者</span>
+                  <span class="comment-item_num" id="6"></span>
+                </div>
+              </li>
+              <li class="comment-item">
+                  <div class="comment-item_sort">
+                    <span>同城</span>
+                    <span class="comment-item_num" id="7"></span>
+                  </div>
+                </li>
+      </ul>
+    </section>
+    <!-- section7 -->
+    <section class="section-seperate section-expander">
+      <p class="section-til">精选</p>
+      <ul class="chosen-comment" id="chosen-comment">
+        <li class="chosen-comment_item">
+          <div class="item-avatal">
+            <img src="https://img5.duitang.com/uploads/item/201409/23/20140923094045_BNYji.thumb.700_0.png" alt="">
+          </div>
+          <div class="item-detail">
+            <div class="item-detail_hd">
+              <div>
+                <span class="nic-name">问我</span>
+                <span class="level">
+                  <img src="" alt="">
+                </span>
+              </div>
+              <p class="item-score_desc">给电影打分<span>10</span>分</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
     <!-- toast -->
     <div id="toast">
       <div class="weui-mask_transparent"></div>
@@ -150,7 +222,7 @@
   <script>
     (function () {
       $.ajax({
-        url: 'https://www.easy-mock.com/mock/5ca2c29464930718b239eb94/lm/lvmeng/myMovie-demo',
+        url: 'https://www.easy-mock.com/mock/5ca5a2ca4ba86c23d507bd8d/example/hello',
         type: 'get',
         success: function (res) {
           console.log(res)
@@ -168,6 +240,7 @@
           celebrities(res.data.person)
           booking(res.data.booking)
           photo(res.data.pictures)
+          comment(res.data.commentNum)
         }
       })
       function star(e) {
@@ -236,6 +309,15 @@
                 </a>
             </li>`)
         }
+    }
+    function comment(e) {
+      $('#1').html(e.commentNum);
+      $('#2').html(e.commentNum);
+      $('#3').html(e.commentNum);
+      $('#4').html(e.commentNum);
+      $('#5').html(e.commentNum);
+      $('#6').html(e.commentNum);
+      $('#7').html(e.commentNum);
     }
     })()
   </script>
