@@ -147,43 +147,43 @@
         <li class="comment-item">
           <div class="comment-item_sort">
             <span>全部</span>
-            <span class="comment-item_num" id="1"></span>
+            <!-- <span class="comment-item_num" id="1"></span> -->
           </div>
         </li>
         <li class="comment-item">
             <div class="comment-item_sort">
               <span>好评</span>
-              <span class="comment-item_num" id="2"></span>
+              <span class="comment-item_num" id="good"></span>
             </div>
           </li>
           <li class="comment-item">
               <div class="comment-item_sort">
                 <span>差评</span>
-                <span class="comment-item_num" id="3"></span>
+                <span class="comment-item_num" id="bad"></span>
               </div>
             </li>
             <li class="comment-item">
                 <div class="comment-item_sort">
                   <span>购票</span>
-                  <span class="comment-item_num" id="4"></span>
+                  <span class="comment-item_num" id="bought"></span>
                 </div>
               </li>
             <li class="comment-item">
                 <div class="comment-item_sort">
                   <span>点映</span>
-                  <span class="comment-item_num" id="5"></span>
+                  <span class="comment-item_num" id="dy"></span>
                 </div>
               </li>
             <li class="comment-item">
                 <div class="comment-item_sort">
                   <span>认证作者</span>
-                  <span class="comment-item_num" id="6"></span>
+                  <span class="comment-item_num" id="author"></span>
                 </div>
               </li>
               <li class="comment-item">
                   <div class="comment-item_sort">
                     <span>同城</span>
-                    <span class="comment-item_num" id="7"></span>
+                    <span class="comment-item_num" id="samecity"></span>
                   </div>
                 </li>
       </ul>
@@ -222,7 +222,7 @@
   <script>
     (function () {
       $.ajax({
-        url: 'https://www.easy-mock.com/mock/5ca5a2ca4ba86c23d507bd8d/example/hello',
+        url: 'https://www.easy-mock.com/mock/5ca2c29464930718b239eb94/lm/lvmeng/myMovie-demo',
         type: 'get',
         success: function (res) {
           console.log(res)
@@ -311,13 +311,13 @@
         }
     }
     function comment(e) {
-      $('#1').html(e.commentNum);
-      $('#2').html(e.commentNum);
-      $('#3').html(e.commentNum);
-      $('#4').html(e.commentNum);
-      $('#5').html(e.commentNum);
-      $('#6').html(e.commentNum);
-      $('#7').html(e.commentNum);
+      $('#good').html(e.good);
+      $('#bad').html(e.bad);
+      $('#dy').html(e.dy);
+      $('#author').html(e.author);
+      $('#samecity').html(e.sameCity);
+      $('#bought').html(e.bought);
+      // $('#7').html(e.commentNum);
     }
     })()
   </script>
