@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+      city: '南昌',
+      circular: true,
       imgUrls: [
         'https://images.unsplash.com/photo-1551334787-21e6bd3ab135?w=640',
         'https://images.unsplash.com/photo-1551214012-84f95e060dee?w=640',
@@ -13,14 +15,23 @@ Page({
       indicatorDots: true ,
       autoplay: true,
       interval: 5000,
-      duration: 500
+      duration: 500,
+      items: []
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
- 
+    let that = this;
+    wx.request({
+      url: 'https://www.easy-mock.com/mock/5ca458284767c3737055c92f/example/http:/mywxapp/demo',
+      success: function(res) {
+        // console.log(res)
+        that.setData({
+          items: res.data.data.movieList
+        })
+      }
+    })
   },
 
   /**
@@ -55,14 +66,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
- 
+    console.log(1234)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-
+    console.log(2356)
   },
 
   /**
