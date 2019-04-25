@@ -1,0 +1,10 @@
+<view class="bg">
+    <view class="body">
+        <view class="sing-brief">
+            <view class="sing-name">{{song.name}}</view>
+            <view class="singer-name">
+                <text wx:for="{{song.ar}}">{{item.name}}</text>
+            </view>
+        </view>
+    </view>
+</view>
