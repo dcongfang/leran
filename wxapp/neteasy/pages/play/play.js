@@ -1,19 +1,19 @@
 // pages/play/play.js
-const app = getApp();
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    isPlay: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id);
+    // console.log(options.id);
     const id = options.id;
     wx.request({
       url: app.globalData.baseUrl + '/song/url',
@@ -21,34 +21,44 @@ Page({
         id: id
       },
       success: res => {
-        console.log('歌曲详情', res);
-        if (res.data.code === 200) {
-          this.createBackgroundAudio(res.data.data[0] || {});
-        }
-        
+        // console.log('歌曲详情', res);
+        if(res.data.code == 200) {
+          this.createBackgroundAudio(res.data.data[0] || 0);
+        } 
       }
     })
     wx.request({
-      url: app.globalData.baseUrl + './song/detial',
+      url: app.globalData.baseUrl + '/song/detail',
       data: {
         ids: id
       },
       success: (res) => {
         console.log('歌曲信息', res);
         this.setData({
-          song:res.data.songs[0]
+          song: res.data.songs[0]
         })
       }
     })
   },
   createBackgroundAudio(songInfo) {
     const bgAudio = wx.getBackgroundAudioManager();
-    bgAudio.title = "title";
-    bgAudio.epname = "epname";
-    bgAudio.singer = "chris wu";
-    bgAudio.coverImgUrl = "";
+    bgAudio.title = 'title';
+    bgAudio.epname = 'epname';
+    bgAudio.singer = 'chris wu';
+    bgAudio.coverImgUrl = '';
     bgAudio.src = songInfo.url;
+    bgAudio.onPlay(res => {
+      this.setData({
+        isPlay: true
+      })
+    })
   },
+  togglePlayStatus() {
+    this.setData({
+      isPlay:true
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
