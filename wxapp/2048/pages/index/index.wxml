@@ -16,7 +16,7 @@
       <text class="restart-button">新游戏</text>
     </view>
     <view class="game-container">
-      <view class="grid-container">
+      <view class="grid-container" bindtouchstart="touchStart" bindtouchmove="touchMove" bintouchend="touchEnd">
         <!-- [
         [{value: 2},null,null,null],
         [{value: 2},null,null,null],
@@ -25,7 +25,7 @@
         ] -->
         <view class="grid-row" wx:for="{{grids}}" wx:for-index="rowIndex" wx:key="rowIndex" wx wx:for-item="row">
           <view class="grid-cell" wx:for="{{row}}" wx:for-item="cell" wx:for-index="cellIndex" wx:key="cellIndex">
-            <view class="tile">
+            <view class="tile tile-{{cell.value}}">
               <view class="tile-inner">
                 {{cell.value}}
               </view>

@@ -4,6 +4,15 @@ Page({
   data: {
     grids: []
   },
+  touchStart() {
+
+  },
+  touchMove() {
+
+  },
+  touchEnd() {
+    
+  },
   gameManager: null,
   onLoad: function() {
     this.gameManager = new GameManager(4);
