@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/group/group",
-    "pages/personal/personal"
+    "pages/personal/personal",
+    "pages/login/login"
   ],
   "window": {
     "backgroundColor": "#F2F2F2",

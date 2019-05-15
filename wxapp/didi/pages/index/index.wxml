@@ -10,7 +10,6 @@
         </view>
       </block>
     </scroll-view>
-    <scroll-view>
       <navigator url="/pages/carts/carts">
         <view class="nav-all">
           <image src="../../assets/images/nav-all.png"/>
