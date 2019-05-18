@@ -19,7 +19,6 @@
   .wrapper .navigator icon {
     font-size: 28rpx;
   }
-  
   icon {
     font-size: 32rpx;
   }
