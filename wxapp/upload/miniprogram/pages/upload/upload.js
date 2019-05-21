@@ -10,22 +10,27 @@ Page({
       sourceType: ['album', 'camera'],
       success(res) {
         that.setData({
-          files: that.data.files.concat(res.tempFilePaths[0])
+          files: that.data.files.concat(res.tempFilePaths)
         })
-        const filePath = res.tempFilePaths[0]
-        const cloudPath = 'my-image' + filePath.match(/\.[^.]+?$/)
-        wx.cloud.uploadFile({
-          cloudPath,
-          filePath, // 文件路径
-          success: res => {
-            // get resource ID
-            // console.log(res.fileID)
-            console.log('上传成功', res)
-          },
-          fail: err => {
-            // handle error
-          }
-        })
+        for (let i = 0; i < res.tempFilePaths.length; i ++) {
+          const filePath = res.tempFilePaths[i]
+          // let a = filePath.lastIndexOf('.')
+          let b = filePath.lastIndexOf('.', filePath.length - 7)
+          let c = filePath.substring(b + 1)
+          const cloudPath = c
+          wx.cloud.uploadFile({
+            cloudPath,
+            filePath, // 文件路径
+            success: res => {
+              // get resource ID
+              // console.log(res.fileID)
+              console.log('上传成功', res)
+            },
+            fail: err => {
+              // handle error
+            }
+          })
+        }
       }
     })
   },
