@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="lists"></div>
+    <script>
+        const promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                reject('err')
+            }, 1500)
+        }) 
+        promise.then(res => {
+            console.log(res)
+        }).catch(err => {
+            // 上报
+            console.log(err);
+        })  
+         try {
+            const lists = document.getElementById('list');
+        //  lists === null
+            lists.style.width = '10px';
+         }catch(error) {
+            console.log('正确的代码')
+         } 
+    </script>
+</body>
+</html>

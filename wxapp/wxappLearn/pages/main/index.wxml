@@ -21,7 +21,6 @@
         </swiper-item>
       </block>
     </swiper>
-
     <view class="movie-lists" wx:for="{{items}}" wx:key="{{index}}">
       <view class="flex item" hover-class="gray_hover" hover-stay-time="100">
         <view class="item_left">
