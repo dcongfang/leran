@@ -9,8 +9,11 @@
 <body>
   <a href="" id="login">Login with Github</a>
   <script>
+    const client_id = '026a085333282cf4bc3c';
+    const authorize_uri = 'https://github.com/login/oauth/authorize';
+    const redirect_uri = 'http://localhost:8080/oauth/redirect';
     const link = document.getElementById('login');
-    link.href = ``
+    link.href = `${authorize_uri}?client_id=${client_id}&redirect=${redirect_uri}`;
   </script>
 </body>
 </html>
