@@ -1,6 +1,6 @@
 // miniprogram/pages/add/add.js
 const db = wx.cloud.database();
-// 找到userInfo表
+// 找到photos表
 const photos = db.collection('photos');
 Page({
 
