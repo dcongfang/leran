@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+  <title>watch</title>
+</head>
+<body>
+  <div id="app">
+    <div class="template" >{{template}}</div>
+    <p class="suggesstion">{{suggesstion}}</p>
+    <div class="btn">
+      <button @click='add'>+</button>
+      <button @click='reduce'>-</button>
+    </div>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data () {
+        return {
+          template: 27,
+          suggesstion: '短袖'
+        }
+      },
+      methods: {
+        add () {
+           this.template += 5
+        },
+        reduce () {
+           this.template -= 5
+        }
+      }
+      // watch: {
+      //   template (newVal, oldVal) {
+      //     if (newVal >= 26) {
+      //       this.suggesstion = '短袖'
+      //     } else if (newVal < 26 && newVal > 0) {
+      //       this.suggesstion = '夹克'
+      //     }else {
+      //       this.suggesstion = '棉袄'
+      //     }
+      //   }
+      // }
+    })
+    app.$watch('template', function(newVal, oldVal) {
+      if (newVal >= 26) {
+            this.suggesstion = '短袖'
+          } else if (newVal < 26 && newVal > 0) {
+            this.suggesstion = '夹克'
+          }else {
+            this.suggesstion = '棉袄'
+          }
+    })
+  </script>
+</body>
+</html>
