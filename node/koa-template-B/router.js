@@ -39,11 +39,13 @@ router.get('./create', async (ctx) => {
   await ctx.render('create');
 })
 // submit method='post'
+
+
 router.post('/create', async (ctx) => {
   console.log(ctx.request.body);
   const {title, content} = ctx.request.req.body;
   let id = Date.now();
-  user.posts.push({
+  user.push({
     id,
     title
   })
