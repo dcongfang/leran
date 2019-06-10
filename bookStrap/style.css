@@ -1,0 +1,107 @@
+.head_bar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+}
+.wapper span, div, p a {
+    text-decoration: none;
+}
+
+div, table, form, input, button, select, textarea, fieldset, legend {
+    outline: none;
+}
+div {
+    display: block;
+}
+body, button, input, select, textarea {
+    font: 12px/1.5 Verdana , Arial, Helvetica, sans-serif;
+    color: #333;
+}
+.head_bar_con {
+  height: 63px;
+  padding: 31px 20px 0;
+}
+.wapper span, div, p a {
+  text-decoration: none;
+}
+div, table, form, input, button, select, textarea, fieldset, legend {
+  outline: none;
+}
+div {
+  display: block;
+}
+body, button, input, select, textarea {
+  font: 12px/1.5 Verdana , Arial, Helvetica, sans-serif;
+  color: #333;
+}
+.logo_index {
+  width: 128px;
+  height: 61px;
+  text-indent: -9999px;
+  display: block;
+  float: left;
+}
+.logo_index, .slogan_v2, .nav_R li a.openTri_R, .nav_R li a.icon_iphone, .icon_wx, .icon_wb, .guide, .logo_v2, .nav_R li a.openTri_R_Pad {
+  background: url(//jci.xiaozhustatic1.com/e19053002/images/icon_head.png) no-repeat;
+}
+.dialogRoom div, p, a, h1, img {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+}
+.ykplayer .x-endPanel div, a, p, span {
+  padding: 0;
+}
+body, button, input, select, textarea {
+  font: 12px/1.5 Verdana , Arial, Helvetica, sans-serif;
+  color: #333;
+}
+.nav_R {
+  float: right;
+  font-family: "microsoft yahei";
+  font-size: 14px;
+}
+ul, ol {
+  list-style: none outside none;
+}
+body, h1, h2, h3, h4, h5, h6, p, blockquote, dl, dt, dd, ul, ol, li, a, span, i, b, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+body, button, input, select, textarea {
+  font: 12px/1.5 Verdana , Arial, Helvetica, sans-serif;
+  color: #333;
+}
+.nav_R li {
+  float: left;
+  color: #fff;
+  height: 44px;
+  line-height: 44px;
+  position: relative;
+  z-index: 999;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.nav_R {
+  float: right;
+  font-family: "microsoft yahei";
+  font-size: 14px;
+}
+ul, ol {
+  list-style: none outside none;
+}
