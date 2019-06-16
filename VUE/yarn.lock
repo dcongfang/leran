@@ -82,3 +82,8 @@ v-click-outside-x@^3.5.6:
   version "3.7.1"
   resolved "https://registry.npm.taobao.org/v-click-outside-x/download/v-click-outside-x-3.7.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fv-click-outside-x%2Fdownload%2Fv-click-outside-x-3.7.1.tgz#aa03eaa0e41e44cb5207dcf86c2d9f0dd64084c1"
   integrity sha1-qgPqoOQeRMtSB9z4bC2fDdZAhME=
+
+vuex@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.npm.taobao.org/vuex/download/vuex-3.1.1.tgz#0c264bfe30cdbccf96ab9db3177d211828a5910e"
+  integrity sha1-DCZL/jDNvM+Wq52zF30hGCilkQ4=

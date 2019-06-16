@@ -9,4 +9,4 @@ const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain')
   res.end('hello world!');
 });
-server.listen(8080)
+server.listen(3000)
