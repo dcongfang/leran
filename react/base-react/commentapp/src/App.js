@@ -10,7 +10,7 @@ class App extends React.Component {
   }
   handleSubmit = (val) => {
     console.log('从子组件', val);
-    let commentLists = this.state.commentLists.slice(0);
+    let commentLists = this.state.commentLists.slice(0);//浅拷贝
     commentLists.push(val);
     this.setState({
       commentLists
