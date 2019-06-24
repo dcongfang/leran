@@ -4,7 +4,7 @@ import withLogin from './WithLogin';
 class LoginStatus extends React.Component {
   render() {
     return (
-      <button>已经登录</button>
+      <button>已经登录了</button>
     )
   }
 }

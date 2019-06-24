@@ -7,6 +7,7 @@ import Counter from './Counter';
 import countReducer from './reducer';
 import * as serviceWorker from './serviceWorker';
 let store = createStore(countReducer)
+console.log(store)
 ReactDOM.render(<App />, document.getElementById('root'));
 const renderCount = () => {
   ReactDOM.render(<Counter value={store.getState()} onIncrement={() => {
