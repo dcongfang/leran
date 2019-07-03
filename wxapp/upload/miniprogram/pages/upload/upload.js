@@ -1,7 +1,8 @@
 const app = getApp();
 Page({
   data: {
-    files: []
+    files: [],
+    fileID: []
   },
   chooseImage () {
     let that = this
@@ -9,6 +10,7 @@ Page({
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success(res) {
+        // console.log(res)
         that.setData({
           files: that.data.files.concat(res.tempFilePaths)
         })
@@ -25,6 +27,10 @@ Page({
               // get resource ID
               // console.log(res.fileID)
               console.log('上传成功', res)
+              this.setData({
+                fileID: this.data.fileID.push(res.fileID)
+              })
+              console.log(fileID)
             },
             fail: err => {
               // handle error
@@ -34,6 +40,7 @@ Page({
       }
     })
   },
+  
   previewImage(e) {
     // console.log(e)
     wx.previewImage({
