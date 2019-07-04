@@ -30,7 +30,6 @@ Page({
               this.setData({
                 fileID: this.data.fileID.push(res.fileID)
               })
-              console.log(fileID)
             },
             fail: err => {
               // handle error
