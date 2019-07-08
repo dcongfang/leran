@@ -14,8 +14,10 @@ export default (state=[], action) => {
     //     return todo
     //   })
       case 'DELETE_TODO':
-        let copystate = state.concat()
-        let newState = copystate.splice(action.id, 1)
+        let copystate = state.concat();
+        // if (action,id === copystate[]) {
+          var newState = copystate.splice(action.id, 1)
+        // }
         return newState
     default: 
     return state;
