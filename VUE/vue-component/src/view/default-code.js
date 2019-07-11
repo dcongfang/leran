@@ -14,3 +14,5 @@ const code =
     }
   }
 </script>`
+
+export default code
