@@ -8,11 +8,13 @@
         </van-swipe-item>
       </van-swipe>
     </div>
+    <Tail />
   </div>
 </template>
 
 <script>
 import Header from "@/common/Header.vue";
+import Tail from '@/common/Tail.vue'
 export default {
   data() {
     return {
@@ -24,7 +26,8 @@ export default {
     };
   },
   components: {
-    Header
+    Header,
+    Tail
   }
 };
 </script>

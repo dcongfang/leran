@@ -8,6 +8,7 @@
       </router-link>
     </v-header>
     <v-tab></v-tab>
+    <v-sidebar />
     <keep-alive>
       <router-view/>
     </keep-alive>
@@ -16,12 +17,14 @@
 
 <script>
 import header from '@/components/header'
+import sidebar from '@/components/sidebar'
 import tab from '@/components/tab'
 export default {
   name: 'App',
   components: {
     'v-header': header,
-    'v-tab': tab
+    'v-tab': tab,
+    'v-sidebar': sidebar
   }
 }
 </script>
