@@ -25,6 +25,7 @@ class Album extends Component {
   }
   componentDidMount() {
     const id = this.props.match.params.id;
+    console.log(id)
     getAlbuminfo(id).then(res => {
       console.log('getAlbuminfo', res);
       let album = AlbumModel.createAlbumBydetail(res.data);

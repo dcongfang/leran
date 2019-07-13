@@ -55,7 +55,7 @@ class Recommend extends Component {
   renderAlbum() {
     const { albumList = [] } = this.state;
     const { match } = this.props
-    // console.log(this.props)
+    // console.log('------------', match)
     return albumList.map(item => {
       // 渲染 album
       const album = createAlbumByItem(item);

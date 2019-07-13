@@ -1,10 +1,10 @@
-export const createStore = (state, storeChange) => {
+export const createStore = (reducer, preloadedState) => {
   const listeners = [] //组件
-  const store = state || {};
+  let store = preloadedState;
   // listen callback
   const subscribe = (listen) => listeners.push(listen) //订阅发布者
   const dispatch = (action) => {
-    const newStore = storeChange(store, action)
+    store = reducer(store, action)
     // 新的
     listeners.forEach(item => {
       item(newStore, store)
