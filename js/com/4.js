@@ -11,13 +11,13 @@ Animal.prototype.eat = function(food) {
 
 // 原型链的继承
 
-// function Cat() {
+function Cat() {
 
-// }
+}
 
-// Cat.prototype = new Animal('cat')
-// Cat.prototype = new Animal()
-// Cat.prototype.name = 'cat'
+Cat.prototype = new Animal('cat')
+Cat.prototype = new Animal()
+Cat.prototype.name = 'cat'
 /*let cat = new Cat()
 console.log(cat.name)
 console.log(cat.eat('fish'))
